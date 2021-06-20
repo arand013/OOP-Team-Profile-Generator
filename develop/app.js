@@ -47,3 +47,59 @@ const managerQuestions = [
     },
 ]
 
+//Engineer: 
+const engineerQuestions = [
+
+    {
+        type: 'input',
+        name: 'engiName',
+        message: 'Enter the name of this engineer'
+    },
+
+    {
+        type: 'input',
+        name: 'engiID',
+        message: 'Enter the ID number for this engineer'
+    },
+
+    {
+        type: 'input',
+        name: 'engiEmail',
+        message: 'Enter the email adress for this engineer'
+    },
+
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter this engineers GitHub user name'
+    },
+]
+
+//Intern:
+const internQuestions = [
+
+    {
+        type: 'input',
+        name: 'internName',
+        message: 'Enter the name of this intern'
+    },
+
+    {
+        type: 'input',
+        name: 'internID',
+        message: 'Enter the ID number for this intern',
+    },
+
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'Enter the email adress for this intern'
+    },
+
+    {
+        type: 'input',
+        name: 'school',
+        message: 'What school does this interen attend, if this intern is not currently attending a school enter "N/A" ',
+    },
+]
+
