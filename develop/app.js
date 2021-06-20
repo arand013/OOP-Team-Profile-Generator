@@ -203,8 +203,6 @@ if (err) {
     return console.log(err)
 }
 })
-
 }
-
 //calls the initiating function 
 init();
