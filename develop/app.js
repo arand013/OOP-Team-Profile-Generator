@@ -103,3 +103,23 @@ const internQuestions = [
     },
 ]
 
+//this question will promt the user if they want to add another employee
+
+const anotherOne = [
+    {
+        type: 'list',
+        name: 'nextEmployee',
+        message: 'Select the type of team member you would like to add next, if you are done select "Done" to generate your team ',
+        choices: ['Engineer', 'Intern', 'Done']
+    }
+]
+// end of questions 
+
+
+//starting function - begins with manager because each team will always have a manager 
+function init() {
+        //starts with the manager function
+        managerPromt();
+}
+
+
