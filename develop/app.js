@@ -159,3 +159,52 @@ function managerPromt() {
         next();
     })
 }
+//Function for Engineer promts
+function engineerPromt() {
+    inquirer.prompt(engineerQuestions).then((response) => {
+
+        let name = response. engiName;
+        let id = response.engiID;
+        let email = response.engiEmail;
+        let github = response.github;
+        // creats an object for this manager 
+        const engineer = new Engineer (name, id, email, github);
+
+        teamArray.push(engineer);
+        console.log(teamArray);
+        //this will call the next function which will promt the user to select the next type of employee they are adding 
+        next();
+    })
+}
+
+//Function for Intern promts
+function internPromt() {
+    inquirer.prompt(internQuestions).then((response) => {
+
+        let name = response. internName;
+        let id = response.internID;
+        let email = response.internEmail;
+        let school = response.school;
+
+        const intern = new Intern (name, id, email, school);
+
+        teamArray.push(intern);
+        console.log(teamArray);
+
+        //this will call the next function which will promt the user to select the next type of employee they are adding 
+        next();
+    })
+}
+
+//function to make the file 
+function makeTeam() {
+fs.writeFile(outputPath, render(teamArray), function(err) {
+if (err) { 
+    return console.log(err)
+}
+})
+
+}
+
+//calls the initiating function 
+init();
