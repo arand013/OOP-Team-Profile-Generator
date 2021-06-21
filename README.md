@@ -1,6 +1,6 @@
 # OOP-Team-Profile-Generator
 ## Description
-This is a back-end node index.js file that is designed to generate Professional a Read-Me.md file.
+This is a back-end node app.js file that is designed to generate Professional a html file of a Team Profile.
 After a successful follow through of a small amount of steps, questions and processes are responded to. 
 
 * GIVEN a command-line application that accepts user input
@@ -42,16 +42,16 @@ After a successful follow through of a small amount of steps, questions and proc
 
 3. Run Test to see if they pass by typing "npm run test" 
 
-2. Then, in the OOP-Team-Profile-Generator "cd" into the develop folder
+4. Then, in the OOP-Team-Profile-Generator "cd" into the develop folder
 
-3. Start by typing "node app.js" 
+5. Start by typing "node app.js" 
 
-4. Answer the prompts that follow
+6. Answer the prompts that follow
 
-5. On success a Team Profile html will be created.
+7. On success a Team Profile html will be created.
 
 ## Contribution
-node index.js 
+node app.js 
 
 ## Tests & Video 
 Enter project testing information here.

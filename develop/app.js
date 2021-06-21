@@ -37,7 +37,7 @@ const managerQuestions = [
     {
         type: 'input',
         name: 'managementEmail',
-        message: 'What is this managers Email adress, enter your email address if you are the manager of this team'
+        message: 'What is this managers Email address, enter your email address if you are the manager of this team'
     },
 
     {
@@ -87,7 +87,7 @@ const internQuestions = [
     {
         type: 'input',
         name: 'internID',
-        message: 'Enter the ID number for this intern',
+        message: 'Enter the ID number for this intern'
     },
 
     {
@@ -99,7 +99,7 @@ const internQuestions = [
     {
         type: 'input',
         name: 'school',
-        message: 'What school does this interen attend, if this intern is not currently attending a school enter "N/A" ',
+        message: 'What school does this interen attend, if this intern is not currently attending a school enter "N/A" '
     },
 ]
 
@@ -110,7 +110,7 @@ const listGen = [
         type: 'list',
         name: 'nextEmployee',
         message: 'Select the type of team member you would like to add next, if you are done select "Done" to generate your team ',
-        choices: ['Engineer', 'Intern', 'Done']
+        choices: ['Manager', 'Engineer', 'Intern', 'Done']
     }
 ]
 //END: of questions 
@@ -149,7 +149,7 @@ function managerPrompt() {
     inquirer.prompt(managerQuestions).then((response) => {
 
         let name = response.managementName;
-        let id = response.managerID;
+        let id = response.managementID;
         let email = response.managementEmail;
         let office = response.office;
 
