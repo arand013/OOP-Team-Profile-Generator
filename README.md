@@ -1,1 +1,63 @@
 # OOP-Team-Profile-Generator
+## Description
+This is a back-end node index.js file that is designed to generate Professional a Read-Me.md file.
+After a successful follow through of a small amount of steps, questions and processes are responded to. 
+
+* GIVEN a command-line application that accepts user input
+1. WHEN I am prompted for my team members and their information
+* THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+2. WHEN I click on an email address in the HTML
+* THEN my default email program opens and populates the TO field of the email with the address
+3. WHEN I click on the GitHub username
+* THEN that GitHub profile opens in a new tab
+4. WHEN I start the application
+* THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+5. WHEN I enter the team manager’s name, employee ID, email address, and office number
+* THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+6. WHEN I select the engineer option
+* THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
+7. WHEN I select the intern option
+* THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+8. WHEN I decide to finish building my team
+* THEN I exit the application, and the HTML is generated
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
+## Installation
+1. Download it through Github
+
+2. Ensure npm, inquirer, and jest are installed ( "npm init", "npm install inquirer" and "npm install jest --save-dev")
+
+## Usage
+
+1. Open terminal
+
+2. Now, in the OOP-Team-Profile-Generator to run test
+
+3. Run Test to see if they pass by typing "npm run test" 
+
+2. Then, in the OOP-Team-Profile-Generator "cd" into the develop folder
+
+3. Start by typing "node app.js" 
+
+4. Answer the prompts that follow
+
+5. On success a Team Profile html will be created.
+
+## Contribution
+node index.js 
+
+## Tests & Video 
+Enter project testing information here.
+
+## Questions
+For questions about this project, please see <br>
+My GitHub at: [arand013](https://github.com/arand013) <br>
+<br>
+Reach out by email at: alexanderaranda@ymail.com

@@ -12,32 +12,32 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
-// -----
+// --Const functions 
 
-//empty array that can store the team members in, Name ID and Email are in every array becase each array becasue that information is prevalent to every employee 
-const teamArray = [];
+//empty array that will store the team members information; Name, ID and Email, Gituhub & office numbers
+const mainArray = [];
 
-// questions for different teams members:
+// START: questions for different teams members:
 
-// Manager: 
+// Manager Q's: 
 const managerQuestions = [
 
     {
         type: 'input',
-        name: 'managerName',
-        message: 'Please enter the name of the manager of this team, or your name if you are the manager of this team. '
+        name: 'managementName',
+        message: 'Please enter the name of the manager of this team, or your name if you are the manager of this team '
     },
 
     {
         type: 'input',
-        name: 'managerID',
+        name: 'managementID',
         message: 'What is this managers ID number, enter your ID number if you are the manager of this team'
     },
 
     {
         type: 'input',
-        name: 'managerEmail',
-        message: 'What is this managers Email adress, enter your email adress if you are the manager of this team'
+        name: 'managementEmail',
+        message: 'What is this managers Email adress, enter your email address if you are the manager of this team'
     },
 
     {
@@ -47,25 +47,25 @@ const managerQuestions = [
     },
 ]
 
-//Engineer: 
+//Engineer Q's: 
 const engineerQuestions = [
 
     {
         type: 'input',
-        name: 'engiName',
+        name: 'engineerName',
         message: 'Enter the name of this engineer'
     },
 
     {
         type: 'input',
-        name: 'engiID',
+        name: 'engineerID',
         message: 'Enter the ID number for this engineer'
     },
 
     {
         type: 'input',
-        name: 'engiEmail',
-        message: 'Enter the email adress for this engineer'
+        name: 'engineerEmail',
+        message: 'Enter the email address for this engineer'
     },
 
     {
@@ -75,7 +75,7 @@ const engineerQuestions = [
     },
 ]
 
-//Intern:
+//Intern Q's:
 const internQuestions = [
 
     {
@@ -93,7 +93,7 @@ const internQuestions = [
     {
         type: 'input',
         name: 'internEmail',
-        message: 'Enter the email adress for this intern'
+        message: 'Enter the email address for this intern'
     },
 
     {
@@ -103,9 +103,9 @@ const internQuestions = [
     },
 ]
 
-//this question will promt the user if they want to add another employee
+//LAST: question will prompt the user if they want to add another employee or finish the profile
 
-const anotherOne = [
+const listGen = [
     {
         type: 'list',
         name: 'nextEmployee',
@@ -113,96 +113,105 @@ const anotherOne = [
         choices: ['Engineer', 'Intern', 'Done']
     }
 ]
-// end of questions 
+//END: of questions 
 
 
-//starting function - begins with manager because each team will always have a manager 
+//START: of functions - 
 function init() {
-        //starts with the manager function
-        managerPromt();
+    //starts with the manager function
+    managerPrompt();
 }
 
 
-//function that will promt the user to select the next type of employee they are adding 
+//this function will prompt the user to select the next type of employee they are adding 
 function next() {
-    inquirer.prompt(anotherOne).then((response) => {
-        
+    inquirer.prompt(listGen).then((response) => {
+
         console.log(response);
         switch (response.nextEmployee) {
+            case 'Manager':
+                managerPrompt();
+                break;
             case 'Engineer':
-                engineerPromt();
+                engineerPrompts();
                 break;
             case 'Intern':
-                internPromt();
+                internPrompts();
                 break;
             case 'Done':
                 console.log('Creating your team!')
-                makeTeam();
+                createTeam();
         }
     })
 }
-//function for the manager questions that will be called first when initiated
-function managerPromt() {
+//Function for Manager; prompt & questions that will be called first when running
+function managerPrompt() {
     inquirer.prompt(managerQuestions).then((response) => {
 
-        let name = response.managerName;
+        let name = response.managementName;
         let id = response.managerID;
-        let email = response.managerEmail;
+        let email = response.managementEmail;
         let office = response.office;
-        // creats an object for this manager 
-        const manager = new Manager(name, id, email, office);
-        //pushes the new manager object to the empty array to be used later 
-        teamArray.push(manager);
-        //this will call the next function which will promt the user to select the next type of employee they are adding 
-        console.log(teamArray);
 
+        // creates an object for this manager 
+        const manager = new Manager(name, id, email, office);
+
+        //pushes the new manager objects to the empty array 
+        mainArray.push(manager);
+
+        //this will call the next function to lead the user to select the next type of employee to add
+        console.log(mainArray);
         next();
     })
 }
-//Function for Engineer promts
-function engineerPromt() {
+//Function for Engineer; prompt & questions
+function engineerPrompts() {
     inquirer.prompt(engineerQuestions).then((response) => {
 
-        let name = response. engiName;
-        let id = response.engiID;
-        let email = response.engiEmail;
+        let name = response.engineerName;
+        let id = response.engineerID;
+        let email = response.engineerEmail;
         let github = response.github;
-        // creats an object for this manager 
-        const engineer = new Engineer (name, id, email, github);
 
-        teamArray.push(engineer);
-        console.log(teamArray);
-        //this will call the next function which will promt the user to select the next type of employee they are adding 
+        // creates an object for this engineer 
+        const engineer = new Engineer(name, id, email, github);
+
+        //pushes the new engineer objects to the empty array 
+        mainArray.push(engineer);
+
+        //this will call the next function which will promt the user to select the next type of employee they are adding
+        console.log(mainArray);
         next();
     })
 }
 
-//Function for Intern promts
-function internPromt() {
+//Function for Intern; prompt & questions
+function internPrompts() {
     inquirer.prompt(internQuestions).then((response) => {
 
-        let name = response. internName;
+        let name = response.internName;
         let id = response.internID;
         let email = response.internEmail;
         let school = response.school;
 
-        const intern = new Intern (name, id, email, school);
+        // creates an object for this intern
+        const intern = new Intern(name, id, email, school);
 
-        teamArray.push(intern);
-        console.log(teamArray);
+        //pushes the new intern objects to the empty array 
+        mainArray.push(intern);
 
         //this will call the next function which will promt the user to select the next type of employee they are adding 
+        console.log(mainArray);
         next();
     })
 }
-
-//function to make the file 
-function makeTeam() {
-fs.writeFile(outputPath, render(teamArray), function(err) {
-if (err) { 
-    return console.log(err)
+//function to create the complete file 
+function createTeam() {
+    fs.writeFile(outputPath, render(mainArray), function (err) {
+        if (err) {
+            return console.log(err)
+        }
+    })
 }
-})
-}
-//calls the initiating function 
+//calls to initiate function 
 init();
