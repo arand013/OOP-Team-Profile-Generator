@@ -59,9 +59,11 @@ html (*w/bootstrap)
 ## Tests & Video 
 Enter project testing information here.
 
-*Link to video
-*Link to github repo (https://github.com/arand013/OOP-Team-Profile-Generator)
-*Created Sample Html link from github
+*Link to video ( https://drive.google.com/file/d/1lM_lA2A7n5Vua1f0cZ6tLhujv_ABwzoQ/view )
+<br>
+*Link to github repo ( https://github.com/arand013/OOP-Team-Profile-Generator )
+<br>
+*Created Sample Html link from github ( file:///Users/vidalinarubio/Desktop/projects/OOP-Team-Profile-Generator/develop/output/team.html )
 
 ## Questions
 For questions about this project, please see <br>
