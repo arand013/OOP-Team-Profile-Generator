@@ -63,7 +63,8 @@ Enter project testing information here.
 <br>
 *Link to github repo ( https://github.com/arand013/OOP-Team-Profile-Generator )
 <br>
-*Created Sample Html link from github ( file:///Users/vidalinarubio/Desktop/projects/OOP-Team-Profile-Generator/develop/output/team.html )
+*Created Sample Html link from github (<img width="1440" alt="Screen Shot 2021-06-21 at 3 37 31 PM" src="https://user-images.githubusercontent.com/81955843/122836216-afc10a00-d2a6-11eb-8c70-19644bcbcd8e.png"> )
+
 
 ## Questions
 For questions about this project, please see <br>
