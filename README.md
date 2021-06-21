@@ -1,6 +1,6 @@
 # OOP-Team-Profile-Generator
 ## Description
-This is a back-end node .js file that is designed to generate Professional a html file of a Team Profile.
+This is an Object Oriented Programming(Backend) node .js file that is designed to generate Professional a html file of a Team Profile.
 After a successful follow through of a small amount of questions and processes are responded to. 
 
 * GIVEN a command-line application that accepts user input
