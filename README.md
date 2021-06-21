@@ -1,7 +1,7 @@
 # OOP-Team-Profile-Generator
 ## Description
-This is a back-end node app.js file that is designed to generate Professional a html file of a Team Profile.
-After a successful follow through of a small amount of steps, questions and processes are responded to. 
+This is a back-end node .js file that is designed to generate Professional a html file of a Team Profile.
+After a successful follow through of a small amount of questions and processes are responded to. 
 
 * GIVEN a command-line application that accepts user input
 1. WHEN I am prompted for my team members and their information
@@ -38,9 +38,9 @@ After a successful follow through of a small amount of steps, questions and proc
 
 1. Open terminal
 
-2. Now, in the OOP-Team-Profile-Generator to run test
+2. Now, in the OOP-Team-Profile-Generator to run a test
 
-3. Run Test to see if they pass by typing "npm run test" 
+3. Run a test to see if constuctor functions pass by typing "npm run test" 
 
 4. Then, in the OOP-Team-Profile-Generator "cd" into the develop folder
 
@@ -52,9 +52,16 @@ After a successful follow through of a small amount of steps, questions and proc
 
 ## Contribution
 node app.js 
+npm packages
+npm test
+html (*w/bootstrap)
 
 ## Tests & Video 
 Enter project testing information here.
+
+*Link to video
+*Link to github repo (https://github.com/arand013/OOP-Team-Profile-Generator)
+*Created Sample Html link from github
 
 ## Questions
 For questions about this project, please see <br>
